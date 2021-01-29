@@ -1,0 +1,43 @@
+# Neovim instead of Vim
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# simple commands
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	ka="killall" \
+    less="less --lesskey-file=$XDG_CONFIG_HOME/.lesskey" \ 
+    man='man --pager="less --lesskey-file=$XDG_CONFIG_HOME/.lesskey"'
+
+# Colorize
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+
+# Apps
+alias \
+	g="git" \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="sudo pacman" \
+	z="zathura" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+    wget="wget --hsts-file ~/.config/wget/wget-hsts" \ 
+    b="bluetoothctl" 
+
+# suckless
+alias \
+    clnmaster="make clean && rm -f config.h && git reset --hard origin/master" \
+    bldmaster="make && sudo make clean install" \
+    edwm="rm -rf ~/.config/dwm/config.h && vim ~/.config/dwm/config.def.h && cd ~/.config/dwm " \ 
+    est="rm -rf ~/.config/st/config.h && vim ~/.config/st/config.def.h && cd ~/.config/dwm "
+
+# C++ coding
+alias \
+    dirc="cd ~/me/stuff/coding/cpp/src" 

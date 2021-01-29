@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/watson/me/docs'
+let g:netrw_dirhist_0='/mnt/stuff/coding/cpp/test/include'
+let g:netrw_dirhist_9='/mnt/stuff/personal/docs'
+let g:netrw_dirhist_8='/mnt/stuff/personal'
+let g:netrw_dirhist_7='/etc/grub.d'
+let g:netrw_dirhist_6='/home/watson/.config/nvim'
+let g:netrw_dirhist_5='/home/watson/.config/cmus/playlists'
+let g:netrw_dirhist_4='/home/watson/.config/cmus'
+let g:netrw_dirhist_3='/home/watson/.config/st'
+let g:netrw_dirhist_2='/home/watson/.config/nvim/.vim'

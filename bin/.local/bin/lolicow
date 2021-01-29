@@ -1,0 +1,5 @@
+#!/bin/sh
+case "$(printf "Loli\\nCowsay" | dmenu -i -p "Select style: ")" in
+    Loli) echo "$*" | dmenu -i -p "Type anything:" | toilet -t -f mono12 | lolcat;;
+    Cowsay) echo "$*" | dmenu -i -p "Type anything:" | cowsay | lolcat;;
+esac

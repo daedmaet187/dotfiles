@@ -1,0 +1,38 @@
+#!/bin/sh
+
+dte(){
+        dte="$(date +"%a, %b %d %R")"
+        echo " $dte"
+}
+
+mem(){
+        mem="$(free -h | awk '/Mem:/ {printf $3 " / " $2}' | sed 's/i//g')"
+        echo "  $mem"
+}
+
+cpu() {
+    cpu="$(sensors | awk '/Tdie/ {print $2}')"
+    echo "  $cpu"
+}
+
+vol(){
+    vol="$(pulsemixer --get-volume | awk '{print $2}')"
+
+    if [ $vol -gt 70 ]; then
+        echo "  $vol%"
+    elif [ $vol -lt 30 ]; then
+        echo " 奔 $vol%"
+    else 
+        echo " 墳 $vol%"
+    fi
+}
+
+status(){
+        echo "$(cpu) |$(mem) |$(vol) |$(dte)"
+}
+
+
+while true; do
+	xsetroot -name "$(status)"
+	sleep 10s 
+done
